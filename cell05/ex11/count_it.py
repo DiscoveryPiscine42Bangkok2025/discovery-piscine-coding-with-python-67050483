@@ -1,3 +1,11 @@
-Count_word = input("Enter your word : ")
+import sys
 
-print("Your word has", len(Count_word), "characters.")
+if len(sys.argv) < 2:
+    print("none")
+else:
+    print("parameter:", len(sys.argv) - 1)
+    for i in sys.argv[1:]:
+        if i.strip() == "":
+            print(f'"{i}": empty or only spaces')
+        else:
+            print(f"{i}: {len(i)}")
