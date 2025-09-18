@@ -1,6 +1,7 @@
 import sys
-
-if len(sys.argv) == 1:
-    print("none")
+args = sys.argv[1:]
+args = input("Enter words: ").split()
+if len(args) > 0:
+    print(args[0])
 else:
-    print(sys.argv[1])
+    print("none")
