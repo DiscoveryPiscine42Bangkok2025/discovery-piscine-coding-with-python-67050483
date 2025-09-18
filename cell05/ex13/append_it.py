@@ -1,10 +1,12 @@
-import sys
+def main():
+    args = input("Enter words: ").split()
 
-if len(sys.argv) == 1:
-    print("none")
-else:
-    for word in sys.argv[1:]:
-        if word.endswith('ism') :
-            continue
-        else :
-            print(word + 'ism')
+    if not args:
+        print("none")
+    else:
+        for word in args:
+            if word.endswith("ism"):
+                continue
+            print(word + "ism")
+if __name__ == "__main__":
+    main()
